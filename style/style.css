@@ -1,0 +1,13 @@
+
+.resultArea {
+	border-width:2px; 
+	border-style:solid;
+	 margin:2em; 
+	 padding-left:1em; 
+	 padding-right:1em; 
+	 padding-bottom:1em
+}
+
+.resultArea input {
+	width: 50%;
+}

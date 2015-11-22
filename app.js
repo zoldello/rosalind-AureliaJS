@@ -14,6 +14,8 @@ export class App {
 	}
 
 	dNANucleotidesCount() {
-		this.dnaNucleotidesCountOutput = this.dNANucleotides.getCount(this.dnaNucleotidesCountInput);
+		let result = this.dNANucleotides.getCount(this.dnaNucleotidesCountInput);
+
+		this.dnaNucleotidesCountOutput = result.length === 0 ? 'Invalid DNA String' : result.join(' ');
 	}
 }

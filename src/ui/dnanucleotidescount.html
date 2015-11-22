@@ -1,0 +1,23 @@
+<template>
+
+	<section>
+		<article>
+			<div class="resultArea">
+				<div>
+					<h3 class="lead">Counting DNA Nucleotides</h3>
+					<label for="dnaNucleotidesCountInput">DNA String</label>				
+					<input id="dnaNucleotidesCountInput"
+					value.two-way="dnaNucleotidesCountInput" 
+					placeholder="DNA String" /><br>
+
+					<button class="btn btn-primary" click.delegate="dNANucleotidesCount()">Process</button> <br>
+				</div>
+
+				<div>
+					<br>
+					Output: <span>${dnaNucleotidesCountOutput}</span>
+				</div>
+			</div>
+		</article>
+	</section>
+</template>
