@@ -2,7 +2,7 @@
 ///TODO: If this becomes larges, refactor into an extension to _.string
 	let DNA = {};
 
- 	DNA.isValidDNA = function(dnaString, ignoreCase = false) {
+ 	DNA.isValid = function(dnaString, ignoreCase = false) {
  		if (!dnaString || typeof dnaString !== 'string') {
  			return false;
  		}

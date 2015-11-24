@@ -1,6 +1,7 @@
 // view model
 import {inject} from 'aurelia-framework';
 import {DNANucleotides} from './src/core/DNANucleotides';
+import _ from './jspm_packages/npm/underscore@1.8.3/underscore-min'
 
 @inject(DNANucleotides)
 export class App {
@@ -14,8 +15,18 @@ export class App {
 	}
 
 	dNANucleotidesCount() {
-		let result = this.dNANucleotides.getCount(this.dnaNucleotidesCountInput);
+		let invalidTex = 'Invalid DNA String',
+			result = null;
 
-		this.dnaNucleotidesCountOutput = result.length === 0 ? 'Invalid DNA String' : result.join(' ');
+		if (this.dnaNucleotidesCountInput.length === 0 || this.dnaNucleotidesCountInput.length > 1000){
+			this.dnaNucleotidesCountOutput = Invalid;
+			return;
+		}
+
+		result = this.dNANucleotides.getCount(this.dnaNucleotidesCountInput);
+
+		this.dnaNucleotidesCountOutput = (_.isEmpty(result)) 
+			? invalidTex : 
+			_.values(result).join(' ');
 	}
 }

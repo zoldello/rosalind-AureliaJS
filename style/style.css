@@ -1,5 +1,11 @@
 
+.bold {
+	font-weight: bold;
+}
+
+
 .resultArea {
+	width: 60%;
 	border-width:2px; 
 	border-style:solid;
 	 margin:2em; 
@@ -9,5 +15,9 @@
 }
 
 .resultArea input {
-	width: 50%;
+	width: 90%;
+}
+
+.resultArea h3 {
+	margin-top: 0.6em;
 }

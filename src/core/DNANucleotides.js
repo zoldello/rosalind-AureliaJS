@@ -18,43 +18,30 @@ export class DNANucleotides {
 
 	getCount(dnaString) {
 		let dnaStringToUpper,
-		nucleotidesListCount = [];
+		nucleotides = {
+			'A': 0, 
+			'C': 0,
+			'T': 0, 
+			'G': 0
+		};
 
 		// ensure input is valid
 		if (!dnaString || !_.isString(dnaString)) {
-			return [];
+			return {};
 		}
 
-		if (!_.string.bioinformatics.DNA.isValidDNA(dnaString, true)) {
-			return [];
-		}
-
-		// initialize return array
-		for (let i = 0; i < 4; i++) {
-			nucleotidesListCount[i] = 0;
+		if (!_.string.bioinformatics.DNA.isValids(dnaString, true)) {
+			return {};
 		}
 
 		// make input upper case, fault tolerance for the use of lower case
 		dnaStringToUpper = dnaString.toUpperCase();
 
-		// main part of method- cout nucleotides
+		// main part of method- count nucleotides
 		_.string.chars(dnaStringToUpper).forEach(n => {
-			switch(n) {
-				case 'A':
-					nucleotidesListCount[0] = nucleotidesListCount[0] + 1;
-					break;
-				case 'C':
-					nucleotidesListCount[1] = nucleotidesListCount[1] + 1;
-					break;
-				case 'G':
-					nucleotidesListCount[2] = nucleotidesListCount[2] + 1;
-					break;
-				case 'T':
-					nucleotidesListCount[3] = nucleotidesListCount[3] + 1;
-					break;
-			}
+			nucleotides[n] = nucleotides[n] + 1;
 		});
 
-		return nucleotidesListCount;
+		return nucleotides;
 	}
 }
