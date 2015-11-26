@@ -32,6 +32,7 @@
       "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1",
       "aurelia-computed": "npm:aurelia-computed@^0.9.1",
       "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1.0.1",
+      "jquery": "github:components/jquery@^2.1.4",
       "twbs/bootstrap": "github:twbs/bootstrap@^3.3.5",
       "underscore": "npm:underscore@^1.8.3",
       "underscore-contrib": "npm:underscore-contrib@^0.3.0",

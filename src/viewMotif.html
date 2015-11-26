@@ -1,8 +1,21 @@
 <template>
-
 	<section>
 		<article>
-			<div class="resultArea">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a 
+						data-toggle="collapse" 
+						data-parent="#accordion"
+						title="${title}"
+						href="#${Id}"
+						class="bold">
+							${title}
+					</a>
+			</h4>
+		</div>
+
+		<div id="${Id}" class="panel-collapse collapse">
+			<div class="panel-body resultArea">
 				<div>
 					<h3 class="lead">${title} (ID: ${Id})</h3>
 					<label for="input">${inputLabel}</label> <br />	
@@ -23,6 +36,7 @@
 					</div>
 				</div>
 			</div>
-		</article>
-	</section>
+		</div>
+	</article>
+</section>
 </template>

@@ -23,6 +23,7 @@ System.config({
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "core-js": "npm:core-js@1.2.6",
+    "jquery": "github:components/jquery@2.1.4",
     "twbs/bootstrap": "github:twbs/bootstrap@3.3.5",
     "underscore": "npm:underscore@1.8.3",
     "underscore-contrib": "npm:underscore-contrib@0.3.0",
