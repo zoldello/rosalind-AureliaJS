@@ -3,9 +3,9 @@ import {inject} from 'aurelia-framework';
 import RNA from './../util/rNA';
 import DNA from './../util/dNA';
 import _ from './../../jspm_packages/npm/underscore@1.8.3/underscore-min'
-import {BaseViewModel} from './baseViewModel.js'
+import {Base} from './base.js'
 
-export class TranscribeDNAToRNAViewModel extends BaseViewModel {
+export class TranscribeDNAToRNAViewModel extends Base {
 	constructor() {	
 		super();
 		this.dNA = DNA;

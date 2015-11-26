@@ -5,8 +5,8 @@ import * as twbs from './../jspm_packages/github/components/jquery@2.1.4/jquery.
 export class App {
 	constructor() {
 		this.problems = [ // order matters
-			{ 'viewModel': 'countingDNANucleotidesViewModel' }, 
-			{ 'viewModel': 'transcribedDNAToRNAViewModel'}
+			{ 'viewModel': 'countingDNANucleotides' }, 
+			{ 'viewModel': 'transcribedDNAToRNA'}
 		];
 	}
 }

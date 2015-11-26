@@ -2,10 +2,10 @@
 import {inject} from 'aurelia-framework';
 import {DNANucleotides} from './../core/DNANucleotides';
 import _ from './../../jspm_packages/npm/underscore@1.8.3/underscore-min'
-import {BaseViewModel} from './baseViewModel.js'
+import {Base} from './base.js'
 
 @inject(DNANucleotides)
-export class CountingDNANucleotides extends BaseViewModel {
+export class CountingDNANucleotidesViewModel extends Base {
 
 	constructor(dNANucleotides) {	
 		super();

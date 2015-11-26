@@ -1,6 +1,6 @@
 /// base call with functionality needed to support inputOutput.html file
 
-export class BaseViewModel {
+export class Base {
 	constructor () {
 		this.title = '';
 		this.input = 'input';
