@@ -3,6 +3,12 @@
 	font-weight: bold;
 }
 
+.exerciseSelector {
+	width: 60%; 
+	margin: 1em; 
+	height:7%; 
+	font-size:2em;
+}
 
 .resultArea {
 	width: 60%;

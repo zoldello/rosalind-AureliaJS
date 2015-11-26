@@ -1,21 +1,7 @@
 <template>
 	<section>
-		<article>
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a 
-						data-toggle="collapse" 
-						data-parent="#accordion"
-						title="${title}"
-						href="#${Id}"
-						class="bold">
-							${title}
-					</a>
-			</h4>
-		</div>
-
-		<div id="${Id}" class="panel-collapse collapse">
-			<div class="panel-body resultArea">
+		<article>	
+			<div class="resultArea">			
 				<div>
 					<h3 class="lead">${title} (ID: ${Id})</h3>
 					<label for="input">${inputLabel}</label> <br />	
@@ -27,7 +13,6 @@
 
 					<button class="btn btn-primary" click.delegate="process()">${processButtonText}</button> <br>
 				</div>
-
 				<div>
 					<br>
 					${outputLabel}: 
@@ -36,7 +21,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</article>
-</section>
+		</article>
+	</section>
 </template>

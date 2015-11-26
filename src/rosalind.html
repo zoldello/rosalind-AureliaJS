@@ -5,11 +5,20 @@
 	<h2 class="text-center">
 		Implementation of <a href="http://www.rosalind.info" target="_blank">Rosalind.info</a> exercises using Aurelia.js 
 	</h2>
-	<div class="panel-group" id="accordion">
+
+	<select change.trigger="changeView()" ref="select" class="exerciseSelector">
+		<option 
+			repeat.for="problem of problems" 
+			value.bind="$index" 
+			ref="selectedExercise">
+				${problem.title} 
+		</option>
+	</select>
+
 	<compose 
-		repeat.for="problem of problems"  
-		view-model="./exercises/${problem.viewModel}" 
+		view-model = "./exercises/${$parent.problems[0].viewModel}"
+		view-model.ref="composeElementViewModel" 
 		view="./viewMotif.html">
 	</compose> 
-</div>
+		
 </template>
