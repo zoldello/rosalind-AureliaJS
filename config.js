@@ -6,7 +6,9 @@ System.config({
     "optional": [
       "runtime",
       "optimisation.modules.system",
-      "es7.decorators"
+      "es7.decorators",
+      "es7.classProperties",
+      "es7.functionBind"
     ]
   },
   paths: {
@@ -16,6 +18,7 @@ System.config({
 
   map: {
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1",
+    "aurelia-computed": "npm:aurelia-computed@0.9.1",
     "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.0.1",
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
@@ -63,6 +66,10 @@ System.config({
       "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.1.0.1",
       "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.1.0.1",
       "core-js": "npm:core-js@1.2.6"
+    },
+    "npm:aurelia-computed@0.9.1": {
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.0.1",
+      "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1"
     },
     "npm:aurelia-dependency-injection@1.0.0-beta.1": {
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",

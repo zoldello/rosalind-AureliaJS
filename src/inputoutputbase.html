@@ -1,0 +1,28 @@
+<template>
+
+	<section>
+		<article>
+			<div class="resultArea">
+				<div>
+					<h3 class="lead">${title} (ID: ${Id})</h3>
+					<label for="input">${inputLabel}</label> <br />	
+
+					<textarea id="input"
+					value.two-way="input"
+					class="dataInputBox" 
+					placeholder.bind="placeholder"> </textarea><br><br />
+
+					<button class="btn btn-primary" click.delegate="process()">${processButtonText}</button> <br>
+				</div>
+
+				<div>
+					<br>
+					${outputLabel}: 
+					<div class="inline ${invalidInputStyle}"> 
+						<span class="bold lead string-wrap">${output}</span>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
+</template>

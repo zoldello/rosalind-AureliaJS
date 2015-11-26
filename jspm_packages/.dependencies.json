@@ -175,5 +175,9 @@
   "npm:underscore.string@3.2.2": {
     "systemjs-json": "github:systemjs/plugin-json@^0.1.0",
     "process": "github:jspm/nodelibs-process@^0.1.0"
+  },
+  "npm:aurelia-computed@0.9.1": {
+    "aurelia-binding": "npm:aurelia-binding@^1.0.0-beta.1",
+    "aurelia-logging": "npm:aurelia-logging@^1.0.0-beta.1"
   }
 }

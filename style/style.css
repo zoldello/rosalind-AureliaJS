@@ -21,3 +21,21 @@
 .resultArea h3 {
 	margin-top: 0.6em;
 }
+
+.string-wrap {
+	width: 80%;
+	word-wrap: break-word;
+}
+
+.dataInputBox {
+	width: 95%
+}
+
+.inline {
+	display: inline;
+}
+
+.error {
+	color: red;
+	font-style: italic;
+}
