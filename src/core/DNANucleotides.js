@@ -7,9 +7,6 @@ import DNA from './../util/dNA'
 export class DNANucleotides {
 	constructor() {
 		_.string = !!_.string ? _.string : underscoreString;
-
-		_.string.bioinformatics = {}
-		_.string.bioinformatics.DNA = DNA;
 	}
 
 	get Id() {
@@ -30,7 +27,7 @@ export class DNANucleotides {
 			return {};
 		}
 
-		if (!_.string.bioinformatics.DNA.isValids(dnaString, true)) {
+		if (!DNA.isValid(dnaString, true)) {
 			return {};
 		}
 
