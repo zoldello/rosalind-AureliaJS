@@ -1,7 +1,7 @@
 // view model
 import {inject} from 'aurelia-framework';
-import {DNANucleotides} from './core/DNANucleotides';
-import _ from './../jspm_packages/npm/underscore@1.8.3/underscore-min'
+import {DNANucleotides} from './../core/DNANucleotides';
+import _ from './../../jspm_packages/npm/underscore@1.8.3/underscore-min'
 import {BaseViewModel} from './baseViewModel.js'
 
 @inject(DNANucleotides)
