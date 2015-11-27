@@ -8,7 +8,9 @@ export class App {
 	constructor() {
 		this.problems = [ // order matters
 			{ 'viewModel': 'countingDNANucleotides', 'title': 'Counting DNA Nucleotides' }, 
-			{ 'viewModel': 'transcribedDNAToRNA', 'title': 'Transcribe DNA To RNA' }
+			{ 'viewModel': 'transcribedDNAToRNA', 'title': 'Transcribe DNA To RNA' },
+			{ 'viewModel': 'complementingDNAStrand', 'title': 'Complementing a Strand of DNA' },
+
 		];
 	}
 

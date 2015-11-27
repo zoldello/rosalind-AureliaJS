@@ -24,28 +24,27 @@ export class CountingDNANucleotidesViewModel extends Base {
 	}
 
 	process () {
-		this.dNANucleotidesCount();
+		this.output = this.dNANucleotidesCount(this.input);
 	}
 
-	dNANucleotidesCount() {
+	dNANucleotidesCount(input) {
 		let invalidText = 'Invalid DNA String',
 			result = null;
 
 		super.clearError();
 
-		if (this.input.length === 0 || this.input.length > 1000){
-			this.output = Invalid;
+		if (input.length === 0 || input.length > 1000){
 			super.error();
-			return;
+		 	return Invalid;
 		}
 
-		result = this.dNANucleotides.getCount(this.input);
+		result = this.dNANucleotides.getCount(input);
 
 		if (_.isEmpty(result)) {
-			this.output = invalidText;
 			super.error();
+			return invalidText;	
 		} else {
-			this.output = _.values(result).join(' ');
+			return _.values(result).join(' ');
 		}
 	}
 }

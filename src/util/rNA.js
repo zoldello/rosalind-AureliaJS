@@ -1,23 +1,43 @@
 /// Bioinformatics Library
-///TODO: (1)If this becomes larges, refactor into an extension to _.string
+///TODO: (1)If this becomes larges, refactor into an extension to _
 ///      (2) This is intended to have no dependencies
 
-let RNA = {};
+(function () {
+	var root = this;
+	var _ = !_ ? {} : _;
 
-RNA.transcribe = function(dNAString, ignoreCase = false) {
-	if (!dNAString || typeof dNAString !== 'string') {
-		return '';
+	_.bioinformatics = !_.bioinformatics ? {} : _.bioinformatics;
+	_.bioinformatics.RNA = !_.bioinformatics.RNA ? {} : _.bioinformatics.RNA;
+
+	if (typeof exports !== 'undefined') {
+		if (typeof module !== 'undefined' && module.exports) {
+			exports = module.exports = _.bioinformatics.RNA;
+		}
+		exports._ = _.bioinformatics.RNA;
+	} else {
+		root._.bioinformatics.RNA = _.bioinformatics.DNA;
 	}
 
-	let dNAStringToUse = ignoreCase ? dNAString.toUpperCase().trim() : dNAString.trim(),
- 			isDNAValid = true, // return value if DNA is not proven invalid
- 			rNA = [];
+	_.bioinformatics.RNA.VERSION = '0.0.1';
 
- 			for (let n of dNAStringToUse) {
+	_.bioinformatics.RNA.transcribe = function(dNAString, ignoreCase) {
+		if (!dNAString || typeof dNAString !== 'string') {
+			return '';
+		}
+
+		var dNAStringToUse = ignoreCase ? dNAString.toUpperCase().trim() : dNAString.trim(),
+ 			isDNAValid = true, // return value if DNA is not proven invalid
+ 			rNA = [], 
+ 			i, 
+ 			n;
+
+ 			for (i = 0; i < dNAStringToUse.length; i++) {
+ 				n = dNAStringToUse[i];
+ 				
  				if (n === 'A' || n === 'C' || n === 'G') {
  					rNA.push(n);
  				} else if (n === 'T') {
- 					rNA.push('U')
+ 					rNA.push('U');
  				} else {
  					isDNAValid = false; 
  					break;
@@ -25,11 +45,17 @@ RNA.transcribe = function(dNAString, ignoreCase = false) {
  			}
 
  			if (!isDNAValid) {
- 				throw new exception('Invalid DNA String');
+ 				throw 'Invalid DNA String';
  			}
 
  			return rNA.join('');
+ 		};
 
- 		}
+ 		_.bioinformatics.RNA.toUpperCaseOrNotToUpperCase = function(dnaString, ignoreCase) {
+ 			if (!dnaString) {
+ 				return '';
+ 			}
 
- export default RNA
+ 			return ignoreCase ? dnaString.toUpperCase().trim() : dnaString.trim();
+ 		};
+ 	})();

@@ -1,36 +1,31 @@
 // view model
 import {inject} from 'aurelia-framework';
-import RNA from './../util/rNA';
 import DNA from './../util/dNA';
 import _ from './../../jspm_packages/npm/underscore@1.8.3/underscore-min'
 import {Base} from './base.js'
 
-export class TranscribeDNAToRNAViewModel extends Base {
+export class ComplementingDNAStrand extends Base {
 	constructor() {	
 		super();
 		this.dNA = DNA;
-		this.rNA = RNA; 
 
 		// view model's model from Base.js	
-		this.title = 'Transcribing DNA into RNA';
+		this.title = 'Complementing a Strand of DNA';
 		this.input = '';
 		this.output = '';
 		this.inputLabel = 'DNA String';
-		this.outputLabel = "Transcibed RNA"
+		this.outputLabel = "complement"
 		this.placeholder = 'DNA String';
-		this.processButtonText = 'Transcibe';
-		this.Id = 'RNA';
+		this.processButtonText = 'complement';
+		this.Id = 'REVC';
 	}
 	
 	process () {
-		this.output = this.transcribe(this.input);
+		this.output = this.reverseComplement(this.input);
+		let x = 0;
 	}
 
-	transcribe(input) {
-		let result = null;
-
-		super.clearError();
-
+	reverseComplement(input) {
 		if (input.length === 0 || input.length > 1000) {
 			super.error();	
 			return `DNA String must be between 1 and 1000 and not: ${input.length}`;
@@ -41,8 +36,6 @@ export class TranscribeDNAToRNAViewModel extends Base {
 			return 'DNA String is not valid';
 		}
 
-		result = this.rNA.transcribe(input, true);
-
-		return (_.isEmpty(result)) ? 'Invalid RNA String' : result;
+		return this.dNA.reverseComplement(input, true);	
 	}
 }

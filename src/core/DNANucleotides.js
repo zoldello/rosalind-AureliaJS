@@ -4,6 +4,7 @@ import _ from './../../jspm_packages/npm/underscore@1.8.3/underscore-min'
 import underscoreString from './../../jspm_packages/npm/underscore.string@3.2.2/dist/underscore.string.min'
 import DNA from './../util/dNA'
 
+// DEPRECATED!!!
 export class DNANucleotides {
 	constructor() {
 		_.string = !!_.string ? _.string : underscoreString;
