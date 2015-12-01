@@ -4,6 +4,8 @@
 /// DNA-object below does not assume ES2015 or a transpiler is available
 
 (function () {
+	'use strict';
+
 	var root = this;
 	var _ = !_ ? {} : _;
 
@@ -117,7 +119,6 @@
  			return reversedcomplementDNA;
  		};
 
-
  		_.bioinformatics.DNA.toUpperCaseOrNotToUpperCase = function(dnaString, ignoreCase) {
  			if (!dnaString) {
  				return '';
@@ -125,4 +126,9 @@
 
  			return ignoreCase ? dnaString.toUpperCase().trim() : dnaString.trim();
  		};
+
+ 		var isNumber = function(n) {
+  			return !isNaN(parseFloat(n)) && isFinite(n);
+		}
+
  	})();
